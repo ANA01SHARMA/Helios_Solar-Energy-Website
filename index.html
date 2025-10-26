@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>SDG</title>
+
+    <style>
+        
+        body {
+            font-family: 'Whitney A', 'Whitney B', Whitney, 'Trebuchet MS', sans-serif !important;
+        }
+
+        #intro {
+            background-image: url('images/ea866ddf12fff84274949e44f2f7df4de5298e52_high.jpg');
+            background-size: 100% 111%;
+            background-position: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+
+        .small-container {
+            top: 20vh;
+            width: 520px;
+            height: 500px;
+            border-top: 8px;
+            color: white;
+        }
+
+        .center-btn,
+        .lower-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        .center-btn {
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to bottom right, #e7781166, #010101);
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .center-btn button {
+            height: 60px;
+            width: 160px;
+            color: white;
+            font-size: 12pt;
+            font-weight: bold;
+            background: #000;
+            border: 1px solid green;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+            align-self: end;
+            margin-right: 50px;
+        }
+
+        .center-btn h2 {
+            font-size: 30pt;
+            font-weight: bold;
+            max-width: 400px;
+            overflow-wrap: break-word;
+            margin-bottom: -2px;
+        }
+
+        .center-btn p {
+            max-width: 400px;
+            margin-top: 25px;
+            font-size: 13pt;
+            overflow-wrap: break-word;
+        }
+
+        .lower-btn {
+            width: 520px;
+            justify-content: space-between;
+            border-top: 1px solid lightgrey;
+            border-bottom: 4px solid green;
+            border: 1px solid lightgray;
+
+        }
+
+        .lower-btn button {
+            height: 60px;
+            width: 50%;
+            font-size: 11pt;
+            font-weight: bold;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .lower-btn button:hover {
+            color: green;
+        }
+
+        .center-btn button:hover {
+            background: #000;
+            border: 2px inset grey;
+            transform: scale(0.99);
+        }
+
+        .vbar div {
+            background: lightgrey;
+            height: 70%;
+            width: 1px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .timeline {
+            border-left: 3px solid #727cf5;
+            border-bottom-right-radius: 4px;
+            border-top-right-radius: 4px;
+            margin: 0 auto;
+            letter-spacing: 0.2px;
+            position: relative;
+            line-height: 1.4em;
+            font-size: 1.03em;
+            padding: 50px;
+            list-style: none;
+            text-align: left;
+            max-width: 80%;
+        }
+
+        @media (max-width: 767px) {
+            .timeline {
+                max-width: 98%;
+                padding: 25px;
+            }
+        }
+
+        .timeline h1 {
+            font-weight: 300;
+            font-size: 1.4em;
+        }
+
+        .timeline h2,
+        .timeline h3 {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline .event {
+            border-bottom: 1px dashed #e8ebf1;
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event {
+                padding-top: 30px;
+            }
+        }
+
+        .timeline .event:last-of-type {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+
+        .timeline .event:before,
+        .timeline .event:after {
+            position: absolute;
+            display: block;
+            top: 0;
+        }
+
+        .timeline .event:before {
+            left: -207px;
+            content: attr(data-date);
+            text-align: right;
+            font-weight: 100;
+            font-size: 0.9em;
+            min-width: 120px;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event:before {
+                left: 0px;
+                text-align: left;
+            }
+        }
+
+        .timeline .event:after {
+            -webkit-box-shadow: 0 0 0 3px #727cf5;
+            box-shadow: 0 0 0 3px #727cf5;
+            left: -55.8px;
+            background: #fff;
+            border-radius: 50%;
+            height: 9px;
+            width: 9px;
+            content: "";
+            top: 5px;
+        }
+
+        @media (max-width: 767px) {
+            .timeline .event:after {
+                left: -31.8px;
+            }
+        }
+
+        .rtl .timeline {
+            border-left: 0;
+            text-align: right;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-right: 3px solid #727cf5;
+        }
+
+        .rtl .timeline .event::before {
+            left: 0;
+            right: -170px;
+        }
+
+        .rtl .timeline .event::after {
+            left: 0;
+            right: -55.8px;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 0%);">
+    <!-- Navigation -->
+    <div id="intro" class="bg-image shadow-2-strong position-relative">
+        <div id="navbar-placeholder"></div>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.378);">
+
+            <div class="small-container position-absolute bottom-0" style="right: 150px;">
+                <div class="center-btn">
+                    <h2>What is SOLAR ENERGY?</h2>
+                    <p>Solar energy is energy that is produced by harnessing sunlight using various
+                        technologies.<br><br>
+                        It is a renewable and sustainable source of energy that can be converted into electricity or
+                        used
+                        directly for heating, lighting, and other applications.</p>
+                    <button onclick="document.querySelector('#read-more').scrollIntoView({ behavior: 'smooth' })">READ
+                        MORE</button>
+                </div>
+                <div class="lower-btn">
+                    <button onclick="window.location.href='/sdgs.html'">KNOW ABOUT SDGs</button>
+                    <div class="vbar">
+                        <div></div>
+                    </div>
+                    <button onclick="window.location.href='/what-we-do.html'"> EXPLORE WHAT WE DO </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" id="read-more" style="margin-top: 95vh">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-dark">
+                        <div class="card-body">
+                            <h2 class="text-light my-5 mx-5">Where We Can Use Solar Energy?</h2>
+                            <div id="content">
+                                <ul class="timeline">
+                                    <li class="event ">
+                                        <h1 class="text-light fw-bold">Residential</h1>
+                                        <p class="text-light">Solar panels installed on rooftops can generate
+                                            electricity for individual
+                                            homes, reducing dependency on the grid and lowering electricity bills.</p>
+                                    </li>
+                                    <li class="event">
+                                        <h1 class="text-light fw-bold">Commercial</h1>
+                                        <p class="text-light">Businesses can benefit from solar energy by installing
+                                            panels on their
+                                            rooftops or on nearby land to power their operations. This can lead to cost
+                                            savings and
+                                            demonstrate a commitment to sustainability.</p>
+                                    </li>
+                                    <li class="event">
+                                        <h1 class="text-light fw-bold">Industrial</h1>
+                                        <p class="text-light">Solar energy can be used in industrial settings to power
+                                            machinery and
+                                            equipment, reducing reliance on fossil fuels and decreasing carbon
+                                            emissions.</p>
+                                    </li>
+                                    <li class="event">
+                                        <h1 class="text-light fw-bold">Agriculture</h1>
+                                        <p class="text-light">Solar energy can be used for irrigation systems, powering
+                                            water pumps, and
+                                            providing electricity to remote agricultural facilities, helping farmers
+                                            reduce costs and
+                                            improve productivity.</p>
+                                    </li>
+                                    <li class="event">
+                                        <h1 class="text-light fw-bold">Transportation</h1>
+                                        <p class="text-light">Solar power can be used to charge electric vehicles, both
+                                            at home and
+                                            through solar-powered charging stations, reducing the environmental impact
+                                            of
+                                            transportation.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 text-light">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/img1.jpg" class="img-fluid rounded" alt="Forest">
+                </div>
+                <div class="col-md-6">
+                    <p class="text-start mx-5">OUR MISSION</p>
+                    <p class="lead display-6 text-start mx-5">Empowering Tomorrow: The Brilliance of Solar Energy</p>
+                    </p>
+                    <p class="text-start mx-5">Our mission is to promote the widespread adoption of solar energy for sustainable development by raising awareness, facilitating collaboration, and advocating for supportive policies and investments worldwide.</p>
+                    <button class="btn btn-success mx-5 " onclick="window.location.href='/donate.html'" style="float: left;">PARTICIPATE NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="container rounded" style="margin-top: 1675px; background-color:rgb(18, 17, 17); width:1300px">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="mx-5">
+                    <p class="lead display-6 text-start text-light">Solar Energy in Space</p>
+                    <p class="text-start text-light">Solar energy powers the International Space Station, showcasing its reliability beyond Earth's atmosphere. The station's massive solar ardrays convert sunlight into electricity for life support and scientific research.</p>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding:0;">
+                <img src="images/International_Space_Station_salutes_the_Sun_pillars.jpg" class="img-fluid " alt="Image 2" style="height: 350px; width: 100%; border-top-right-radius: 8px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="padding:0;">
+                <img src="images/3187793552_de7e1f5200_k.jpg" class="img-fluid" alt="Image 3" style="height: 350px; width: 100%;  border-bottom-left-radius: 8px">
+            </div>
+            <div class="col-md-6 d-flex align-items-center"> 
+                <div class="mx-5">
+                    <p class="lead display-6 text-start text-light">Solar-Powered Airports</p>
+                    <p class="text-start text-light">Cochin International Airport in India became the world's first fully solar-powered airport in 2015, using over 46,000 solar panels covering 45 acres. This initiative not only slashes carbon emissions but also saves on electricity bills, demonstrating solar energy's versatility in unexpected places.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="col-12 mt-5" style="background: rgba(49, 49, 49, 0.441);
+    background: linear-gradient(360deg, rgba(49, 49, 49, 0.292) 88%, rgba(37, 37, 37, 0.308) 93%, rgba(67, 67, 67, 0.412) 96%, rgba(0,0,0,1) 100%);">
+        <div id="footer-placeholder"></div>
+    </footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

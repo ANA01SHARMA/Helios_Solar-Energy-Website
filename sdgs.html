@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>SDG</title>
+    <style>
+        /* Custom CSS for the grid */
+        body {
+            background: black !important;
+            font-family: 'Whitney A', 'Whitney B', Whitney, 'Trebuchet MS', sans-serif !important;
+        }
+        .description-row {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .sdggoals {
+            margin-top: 60px;
+        }
+        .sdggoals img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="container text-light">
+        <h2 class="text-center my-4">Sustainable Development Goals</h2>
+        <div class="About_SDG">
+            <p class="lead">
+                The 2030 Agenda for Sustainable Development, unanimously adopted by all United Nations
+                Member States in 2015, serves as a collective roadmap towards global peace, prosperity,
+                and sustainability. Central to this agenda are the 17 Sustainable Development Goals
+                (SDGs), which demand immediate action from all nations, both developed and developing,
+                through international collaboration. These goals underscore the interconnectedness of
+                poverty eradication, enhanced healthcare and education, reduced inequality, and economic
+                advancement, alongside concerted efforts to combat climate change and safeguard our natural
+                ecosystems, including oceans and forests.
+            </p>
+            <p class="lead">
+                The Sustainable Development Goals (SDGs) are the culmination of years of collaborative
+                efforts between countries and the United Nations, including the UN Department of Economic and Social
+                Affairs. This journey traces back to the Earth Summit in Rio de Janeiro in June 1992, where Agenda
+                21 was embraced by over 178 nations, outlining a global strategy for sustainable development to
+                enhance human well-being and safeguard the environment.
+            </p>
+            <ol class="list-group list-group-flush list-group-numbered">
+                <li class="list-group-item">Building on this momentum, the Millennium Summit in September 2000 led to
+                    the adoption of
+                    the Millennium Declaration, resulting in the formulation of the eight Millennium Development Goals
+                    (MDGs) aimed at alleviating extreme poverty by 2015. Subsequently, the World Summit on Sustainable
+                    Development in Johannesburg in 2002 reinforced commitments to poverty eradication and environmental
+                    protection, expanding upon previous frameworks such as Agenda 21 and the Millennium Declaration by
+                    emphasizing the importance of multilateral partnerships.</li>
+                <li class="list-group-item">The United Nations Conference on Sustainable Development (Rio+20) in June
+                    2012 marked another pivotal
+                    moment,
+                    resulting in the adoption of "The Future We Want," which initiated the process of crafting the SDGs
+                    to
+                    succeed the MDGs. This event also ushered in the establishment of the UN High-level Political Forum
+                    on
+                    Sustainable Development and outlined further measures for sustainable development implementation.
+                </li>
+                <li class="list-group-item">In 2013, the General Assembly established an Open Working Group to draft a
+                    proposal for the SDGs,
+                    leading
+                    to the initiation of negotiations on the post-2015 development agenda in January 2015. This process
+                    culminated in the historic adoption of the 2030 Agenda for Sustainable Development, comprising 17
+                    SDGs,
+                    during the UN Sustainable Development Summit in September 2015.</li>
+                <li class="list-group-item">2015 witnessed several landmark agreements, including the Sendai Framework
+                    for Disaster Risk Reduction,
+                    the Addis Ababa Action Agenda on Financing for Development, the Paris Agreement on Climate Change,
+                    and
+                    the
+                    transformative 2030 Agenda for Sustainable Development.</li>
+                <li class="list-group-item">Today, the annual High-level Political Forum on Sustainable Development
+                    serves as the primary UN
+                    platform for monitoring and reviewing progress towards achieving the SDGs, symbolizing the ongoing
+                    commitment to global sustainable development.</li>
+            </ol>
+        </div>
+    </div>
+    <div class="container m-6">
+        <div class="sdggoals">
+            <h2 class="text-center text-light my-4">17 Goals of Sustainable Development</h2>
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <img src="images/sdg-wheel-landscape-white-bg_en.png" class="img-fluid" alt="SDG-0">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sustainable_Development_Goal_01NoPoverty.svg/449px-Sustainable_Development_Goal_01NoPoverty.svg.png"
+                        class="img-fluid" alt="SDG-1" onclick="displayDescription(this, '1')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Sustainable_Development_Goal_02ZeroHunger.svg/330px-Sustainable_Development_Goal_02ZeroHunger.svg.png"
+                        class="img-fluid" alt="SDG-2" onclick="displayDescription(this, '2')">
+
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sustainable_Development_Goal_03GoodHealth.svg/450px-Sustainable_Development_Goal_03GoodHealth.svg.png"
+                        class="img-fluid" alt="SDG-3" onclick="displayDescription(this, '3')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sustainable_Development_Goal_04QualityEducation.svg/330px-Sustainable_Development_Goal_04QualityEducation.svg.png"
+                        class="img-fluid" alt="SDG-4" onclick="displayDescription(this, '4')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sustainable_Development_Goal_05GenderEquality.svg/450px-Sustainable_Development_Goal_05GenderEquality.svg.png"
+                        class="img-fluid" alt="SDG-5" onclick="displayDescription(this, '5')">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sustainable_Development_Goal_6.png/330px-Sustainable_Development_Goal_6.png"
+                        class="img-fluid" alt="SDG-6" onclick="displayDescription(this, '6')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sustainable_Development_Goal_07CleanEnergy.svg/450px-Sustainable_Development_Goal_07CleanEnergy.svg.png"
+                        class="img-fluid" alt="SDG-7" onclick="displayDescription(this, '7')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Sustainable_Development_Goal_08DecentWork.svg/450px-Sustainable_Development_Goal_08DecentWork.svg.png"
+                        class="img-fluid" alt="SDG-8" onclick="displayDescription(this, '8')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sustainable_Development_Goal_09Industry.svg/450px-Sustainable_Development_Goal_09Industry.svg.png"
+                        class="img-fluid" alt="SDG-9" onclick="displayDescription(this, '9')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Sustainable_Development_Goal_10ReducedInequalities.svg/330px-Sustainable_Development_Goal_10ReducedInequalities.svg.png"
+                        class="img-fluid" alt="SDG-10" onclick="displayDescription(this, '10')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sustainable_Development_Goal_11SustainableCities.svg/330px-Sustainable_Development_Goal_11SustainableCities.svg.png"
+                        class="img-fluid" alt="SDG-11" onclick="displayDescription(this, '11')">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Sustainable_Development_Goal_12ResponsibleConsumption.svg/330px-Sustainable_Development_Goal_12ResponsibleConsumption.svg.png"
+                        class="img-fluid" alt="SDG-12" onclick="displayDescription(this, '12')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sustainable_Development_Goal_13Climate.svg/450px-Sustainable_Development_Goal_13Climate.svg.png"
+                        class="img-fluid" alt="SDG-13" onclick="displayDescription(this, '13')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Sustainable_Development_Goal_14LifeBelowWater.svg/450px-Sustainable_Development_Goal_14LifeBelowWater.svg.png"
+                        class="img-fluid" alt="SDG-14" onclick="displayDescription(this, '14')"> 
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sustainable_Development_Goal_15LifeOnLand.svg/330px-Sustainable_Development_Goal_15LifeOnLand.svg.png"
+                        class="img-fluid" alt="SDG-15" onclick="displayDescription(this, '15')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg/450px-Sustainable_Development_Goal_16PeaceJusticeInstitutions.svg.png"
+                        class="img-fluid" alt="SDG-16" onclick="displayDescription(this, '16')">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sustainable_Development_Goal_17Partnerships.svg/330px-Sustainable_Development_Goal_17Partnerships.svg.png"
+                        class="img-fluid" alt="SDG-17" onclick="displayDescription(this, '17')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="col-12 mt-5" style="background: rgba(49, 49, 49, 0.441);
+    background: linear-gradient(360deg, rgba(49, 49, 49, 0.292) 88%, rgba(37, 37, 37, 0.308) 93%, rgba(67, 67, 67, 0.412) 96%, rgba(0,0,0,1) 100%);">
+        <div id="footer-placeholder"></div>
+    </footer>
+    
+    <script src="js/footer.js"></script>
+    <script src="js/sdg_contents.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

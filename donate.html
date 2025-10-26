@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate for Nature</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #343a40 !important;
+      color: #fff !important;
+      font-family: 'Whitney A', 'Whitney B', Whitney, 'Trebuchet MS', sans-serif !important;
+    }
+    .form-container {
+      background-color: #464e55 !important;
+      padding: 30px !important;
+      border-radius: 20px !important;
+      box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.1) !important;
+    }
+    .form-container h2 {
+      margin-bottom: 30px !important;
+    }
+    .form-group label {
+      color: #adb5bd !important;
+    }
+    .btn-donate {
+      background-color: #007bff !important;
+      border-color: #007bff !important;
+    }
+    .btn-donate:hover {
+      background-color: #0056b3 !important;
+      border-color: #0056b3 !important;
+    }
+    .donate-icon {
+      color: #28a745 !important;
+      font-size: 3rem !important;
+    }
+    .why-donate {
+      background-color: #343a40 !important;
+      padding: 30px !important;
+      border-radius: 20px !important;
+      text-align: left !important;
+    }
+    .why-donate h3 {
+      color: #28a745 !important;
+      margin-bottom: 20px !important;
+    }
+    .donate-image img {
+      max-width: 100% !important;
+      border-radius: 20px !important;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <div class="container my-1">
+    <!-- Why Donate Section -->
+    <div class="row justify-content-center">
+      <div class="col-m-12">
+        <div class="why-donate">
+          <h3>Why Donate to Nature Causes?</h3>
+          <p>Nature sustains life on Earth, providing us with clean air, fresh water, food, and resources. It's facing challenges due to climate change, pollution, habitat destruction, and biodiversity loss.</p>
+          <p>Donating to nature-related causes aligned with Sustainable Development Goals (SDGs) can contribute to preserving our planet. Your support can help protect endangered species, restore ecosystems, combat climate change, and promote sustainable development.</p>
+          <p>Together, we can ensure a healthy and thriving planet for all living beings.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-1">
+      <div class="col-md-6">
+        <div class="form-container">
+          <h2 class="text-center">Donate for Nature <i class="fas fa-hand-holding-heart donate-icon"></i></h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="amount">Donation Amount ($)</label>
+                <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="currency">Currency</label>
+                <select class="form-control" id="currency">
+                  <option>USD</option>
+                  <option>EUR</option>
+                  <option>GBP</option>
+                  <option>JPY</option>
+                  <option>AUD</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cause">Choose a Cause</label>
+              <select class="form-control" id="cause">
+                <option>Climate Action</option>
+                <option>Life Below Water</option>
+                <option>Life on Land</option>
+                <option>Clean Water and Sanitation</option>
+                <option>Sustainable Cities and Communities</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-donate btn-block">Donate Now <i class="fas fa-heart"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Image Section -->
+        <div class="donate-image mx-0">
+          <img src="https://www.asvattha.org.in/wp-content/uploads/2021/11/Donate-for-Saplings-%E2%80%93-Give-the-Gift-to-Mother-Nature.jpg" alt="Nature Image" height="520px">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="col-12 mt-5" style="background: rgba(49, 49, 49, 0.441);
+  background: linear-gradient(360deg, rgba(49, 49, 49, 0.292) 88%, rgba(37, 37, 37, 0.308) 93%, rgba(67, 67, 67, 0.412) 96%, rgba(0,0,0,1) 100%);">
+      <div id="footer-placeholder"></div>
+  </footer>
+  
+  <script src="js/footer.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+</body>
+</html>
